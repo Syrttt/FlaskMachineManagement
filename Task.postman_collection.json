@@ -1,0 +1,322 @@
+{
+	"info": {
+		"_postman_id": "b75e2d00-e1f2-4d37-a77b-f1ae0d79f1f1",
+		"name": "Task",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18199731"
+	},
+	"item": [
+		{
+			"name": "http://localhost:5000/login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"username\": \"newfactory1\", \"password\": \"default_password\"}"
+				},
+				"url": {
+					"raw": "http://localhost:5000/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/create_factory",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcwMjYzNDQwMSwianRpIjoiMWMwZTZmNDctZjI3OC00MTYyLTk4ZDktODYzM2E4YmFjNWY5IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6eyJpZCI6MSwidXNlcl90eXBlIjoiYWRtaW4ifSwibmJmIjoxNzAyNjM0NDAxLCJjc3JmIjoiMGY2YjZmMmQtOTgxZi00OWM3LThlNjYtZjJkZDc2NjUxMjI5IiwiZXhwIjoxNzAyNjM1MzAxfQ.b5LuwFv6dqylswYACUJSYbKJhs4yASzJJ7X8Vlyulcw"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"factory_name\": \"NewFactory2\"}"
+				},
+				"url": {
+					"raw": "http://localhost:5000/create_factory",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"create_factory"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/factories",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcwMjYzNDQ4OSwianRpIjoiZmFmY2U0MmYtMDcxMi00MDIzLWI4MTMtMjkxMjQyNzg2NTZkIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6eyJpZCI6MiwidXNlcl90eXBlIjoibm9ybWFsIn0sIm5iZiI6MTcwMjYzNDQ4OSwiY3NyZiI6ImY4Y2Q3MzdlLWExYjEtNGQ5Yi1hZGY5LWM2OWI1ZTczYTNmOCIsImV4cCI6MTcwMjYzNTM4OX0.xPJebEaeirTRdwJEMBmiv86y44vmeOL9DmZJSOVq720"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/factories",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"factories"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/add_machine   normalUser",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcwMjYzNDQ4OSwianRpIjoiZmFmY2U0MmYtMDcxMi00MDIzLWI4MTMtMjkxMjQyNzg2NTZkIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6eyJpZCI6MiwidXNlcl90eXBlIjoibm9ybWFsIn0sIm5iZiI6MTcwMjYzNDQ4OSwiY3NyZiI6ImY4Y2Q3MzdlLWExYjEtNGQ5Yi1hZGY5LWM2OWI1ZTczYTNmOCIsImV4cCI6MTcwMjYzNTM4OX0.xPJebEaeirTRdwJEMBmiv86y44vmeOL9DmZJSOVq720"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"machine_name\": \"NewMachineFc01\"}"
+				},
+				"url": {
+					"raw": "http://localhost:5000/add_machine",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"add_machine"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/add_machine admUser",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcwMjU5NjI5OCwianRpIjoiZGExYjYwMjEtZThkNS00YzExLTg5ZDctMmYyYjMxZmU0ZDc2IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6eyJpZCI6MSwidXNlcl90eXBlIjoiYWRtaW4ifSwibmJmIjoxNzAyNTk2Mjk4LCJjc3JmIjoiM2JhMTNiZjEtNWU2YS00ODg2LTkzYjYtYTE2NmU0Y2ZhOTk4IiwiZXhwIjoxNzAyNTk3MTk4fQ.F0nLQqAoyAaQhLoO3Nv0x95kmelcJpzWSC4ob3zFKMU"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"machine_name\": \"NewMachine02\", \"factory_id\": 1}"
+				},
+				"url": {
+					"raw": "http://localhost:5000/add_machine",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"add_machine"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/update_factory/1",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcwMjYzNDQ4OSwianRpIjoiZmFmY2U0MmYtMDcxMi00MDIzLWI4MTMtMjkxMjQyNzg2NTZkIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6eyJpZCI6MiwidXNlcl90eXBlIjoibm9ybWFsIn0sIm5iZiI6MTcwMjYzNDQ4OSwiY3NyZiI6ImY4Y2Q3MzdlLWExYjEtNGQ5Yi1hZGY5LWM2OWI1ZTczYTNmOCIsImV4cCI6MTcwMjYzNTM4OX0.xPJebEaeirTRdwJEMBmiv86y44vmeOL9DmZJSOVq720"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"new_factory_name\": \"NewFactoryName1\"}"
+				},
+				"url": {
+					"raw": "http://localhost:5000/update_factory/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"update_factory",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/update_machine/1",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcwMjYzNDQ4OSwianRpIjoiZmFmY2U0MmYtMDcxMi00MDIzLWI4MTMtMjkxMjQyNzg2NTZkIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6eyJpZCI6MiwidXNlcl90eXBlIjoibm9ybWFsIn0sIm5iZiI6MTcwMjYzNDQ4OSwiY3NyZiI6ImY4Y2Q3MzdlLWExYjEtNGQ5Yi1hZGY5LWM2OWI1ZTczYTNmOCIsImV4cCI6MTcwMjYzNTM4OX0.xPJebEaeirTRdwJEMBmiv86y44vmeOL9DmZJSOVq720"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"new_machine_name\": \"NewMachineNameFc01\"}"
+				},
+				"url": {
+					"raw": "http://localhost:5000/update_machine/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"update_machine",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:5000/add_machine_feature/1",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcwMjYzNzg2MiwianRpIjoiOTVlMWY4ZjYtNzM0ZS00MDRmLWE3ZDYtMWUzNzNkYjdkNjJlIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6eyJpZCI6MiwidXNlcl90eXBlIjoibm9ybWFsIn0sIm5iZiI6MTcwMjYzNzg2MiwiY3NyZiI6ImVlOWU3ZjYxLTYzMDEtNDliOS05YzZmLWU1YzQ0ODc4OTgwYSIsImV4cCI6MTcwMjYzODc2Mn0.P__BQzq0MSggt0IB3HRYwY50KSYmGtIvG7q-5qJ_0LM"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"feature_name\": \"Hız\",\r\n    \"feature_value\": \"50 a/d\"\r\n  }"
+				},
+				"url": {
+					"raw": "http://localhost:5000/add_machine_feature/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"add_machine_feature",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/delete_machine_features",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcwMjYzNzg2MiwianRpIjoiOTVlMWY4ZjYtNzM0ZS00MDRmLWE3ZDYtMWUzNzNkYjdkNjJlIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6eyJpZCI6MiwidXNlcl90eXBlIjoibm9ybWFsIn0sIm5iZiI6MTcwMjYzNzg2MiwiY3NyZiI6ImVlOWU3ZjYxLTYzMDEtNDliOS05YzZmLWU1YzQ0ODc4OTgwYSIsImV4cCI6MTcwMjYzODc2Mn0.P__BQzq0MSggt0IB3HRYwY50KSYmGtIvG7q-5qJ_0LM"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"machine_features\": [\"1\"]\r\n  }"
+				},
+				"url": {
+					"raw": "http://localhost:5000/delete_machine_features",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"delete_machine_features"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/update_machine_feature_value",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcwMjYzODU1MywianRpIjoiMjI3Y2IzMzAtNWFhYi00ZDE4LWI3N2QtMmU1OGFlMGFiNmQ0IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6eyJpZCI6MiwidXNlcl90eXBlIjoibm9ybWFsIn0sIm5iZiI6MTcwMjYzODU1MywiY3NyZiI6IjJhNTQyMzgxLWY2M2ItNDBjYi1hYjg2LTFkOTBjMjA4ZDkzNSIsImV4cCI6MTcwMjYzOTQ1M30.o27n3izLAoqJYnpo4fdmlVYYx15I0fwi6Lf0Nya-4YE"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"new_value\": \"50 a/d\"\r\n  }"
+				},
+				"url": {
+					"raw": "http://localhost:5000/update_machine_feature_value/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"update_machine_feature_value",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

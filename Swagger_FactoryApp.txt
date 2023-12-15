@@ -1,0 +1,205 @@
+openapi: 3.0.3
+info:
+  title: FactoryApp
+  version: 1.0.0
+  contact: {}
+servers:
+  - url: http://localhost:5000
+paths:
+  /login:
+    post:
+      summary: http://localhost:5000/login
+      description: http://localhost:5000/login
+      operationId: httpLocalhost5000Login
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                password:
+                  type: string
+                  example: default_password
+                username:
+                  type: string
+                  example: newfactory1
+            examples:
+              http://localhost:5000/login:
+                value:
+                  password: default_password
+                  username: newfactory1
+      responses:
+        '200':
+          description: ''
+  /create_factory:
+    post:
+      summary: http://localhost:5000/create_factory
+      description: http://localhost:5000/create_factory
+      operationId: httpLocalhost5000CreateFactory
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                factory_name:
+                  type: string
+                  example: NewFactory2
+            examples:
+              http://localhost:5000/create_factory:
+                value:
+                  factory_name: NewFactory2
+      responses:
+        '200':
+          description: ''
+  /factories:
+    get:
+      summary: http://localhost:5000/factories
+      description: http://localhost:5000/factories
+      operationId: httpLocalhost5000Factories
+      responses:
+        '200':
+          description: ''
+  /add_machine:
+    post:
+      summary: http://localhost:5000/add_machine   normalUser&&ADMuser
+      description: http://localhost:5000/add_machine   normalUser
+      operationId: httpLocalhost5000AddMachineNormaluser
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                factory_id:
+                  type: number
+                  example: 1
+                machine_name:
+                  type: string
+                  example: NewMachine02
+            examples:
+              http://localhost:5000/add_machine   normalUser:
+                value:
+                  machine_name: NewMachineFc01
+              http://localhost:5000/add_machine admUser:
+                value:
+                  factory_id: 1
+                  machine_name: NewMachine02
+      responses:
+        '200':
+          description: ''
+  /update_factory/1:
+    put:
+      summary: http://localhost:5000/update_factory/{FactoryID}
+      description: http://localhost:5000/update_factory/1
+      operationId: httpLocalhost5000UpdateFactory1
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                new_factory_name:
+                  type: string
+                  example: NewFactoryName1
+            examples:
+              http://localhost:5000/update_factory/1:
+                value:
+                  new_factory_name: NewFactoryName1
+      responses:
+        '200':
+          description: ''
+  /update_machine/1:
+    put:
+      summary: http://localhost:5000/update_machine/{MachineID}
+      description: http://localhost:5000/update_machine/1
+      operationId: httpLocalhost5000UpdateMachine1
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                new_machine_name:
+                  type: string
+                  example: NewMachineNameFc01
+            examples:
+              http://localhost:5000/update_machine/1:
+                value:
+                  new_machine_name: NewMachineNameFc01
+      responses:
+        '200':
+          description: ''
+  /add_machine_feature/1:
+    post:
+      summary: https://localhost:5000/add_machine_feature/{MachindID}
+      description: https://localhost:5000/add_machine_feature/1
+      operationId: httpsLocalhost5000AddMachineFeature1
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                feature_name:
+                  type: string
+                  example: Hız
+                feature_value:
+                  type: string
+                  example: 50 a/d
+            examples:
+              https://localhost:5000/add_machine_feature/1:
+                value:
+                  feature_name: Hız
+                  feature_value: 50 a/d
+      responses:
+        '200':
+          description: ''
+  /delete_machine_features:
+    delete:
+      summary: http://localhost:5000/delete_machine_features
+      description: http://localhost:5000/delete_machine_features
+      operationId: httpLocalhost5000DeleteMachineFeatures
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                machine_features:
+                  type: array
+                  items:
+                    type: string
+                    example: '1'
+                  example:
+                    - '1'
+            examples:
+              http://localhost:5000/delete_machine_features:
+                value:
+                  machine_features:
+                    - '1'
+      responses:
+        '200':
+          description: ''
+  /update_machine_feature_value/1:
+    put:
+      summary: http://localhost:5000/update_machine_feature_value
+      description: http://localhost:5000/update_machine_feature_value
+      operationId: httpLocalhost5000UpdateMachineFeatureValue
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                new_value:
+                  type: string
+                  example: 50 a/d
+            examples:
+              http://localhost:5000/update_machine_feature_value:
+                value:
+                  new_value: 50 a/d
+      responses:
+        '200':
+          description: ''
+tags: []
